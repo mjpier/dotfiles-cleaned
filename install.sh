@@ -212,6 +212,7 @@ function install_dotfiles() {
         cp -rfv ${from_1[$i_1]} ${to_1[$i_1]}
     done
 
+    $sud_cmd cp -rfv dotfiles/bin/pfetch /usr/bin/pfetch
     $sud_cmd cp -rfv dotfiles/sessions/* /usr/share/xsessions
     $sud_cmd cp -rfv dotfiles/RCs/nanorc /etc/nanorc
     cp -rfv dotfiles/core_scripts/bash_git $HOME/.bash_git
@@ -223,6 +224,7 @@ function install_dotfiles() {
     chmod +x $HOME/.bash_git
     chmod +x $HOME/.dwm/autostart.sh
     chmod +x $HOME/.dwm/dwm-bar/*
+    $sud_cmd chmod +x /usr/bin/pfetch
 }
 
 function options() {

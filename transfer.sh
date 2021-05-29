@@ -20,6 +20,7 @@ mkdir -p dotfiles/config
 mkdir -p dotfiles/config/fish
 mkdir -p dotfiles/core
 mkdir -p dotfiles/sessions
+mkdir -p dotfiles/bin
 
 from=(
     "/home/ari/.bash_git"
