@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=dwm
+X-LightDM-DesktopName=dwm
+Comment=Dynamic Window Manager
+Icon=dwm
+Exec=dwm
+Type=Application
