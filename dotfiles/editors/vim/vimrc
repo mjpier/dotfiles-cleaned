@@ -72,6 +72,8 @@ Plug 'preservim/nerdtree'
 " icons
 Plug 'ryanoasis/vim-devicons'
 
+" markdown preview
+Plug 'iamcco/markdown-preview.vim'
 
 " initialise plgins
 call plug#end()
@@ -100,6 +102,8 @@ nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
+nnoremap <leader>m :MarkdownPreview<CR>
+nnoremap <leader>f :MarkdownPreviewStop<CR>
 
 " close nerdtree if it's the only window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
