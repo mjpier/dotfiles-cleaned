@@ -103,7 +103,7 @@ function install_software() {
 
     echo -e "${IGreen}[!] Installing extra packages${Reset}"
     echo -e "${IBlack}[*] ${pks_extra}${Reset}"
-    echo -e "${Blue}[?] What packages to exclude (seperate by \",\")?${Reset}"
+    echo -e "${Blue}[?] What packages to exclude? (seperate by \",\")${Reset}"
     echo -en "${Green}>>> ${Reset}"
     read -p "" pkg_exl
     pkg_exl=$(echo -n $pkg_exl | sed "s/ //g")
@@ -112,7 +112,7 @@ function install_software() {
 
     echo -e "${IGreen}[!] Installing extra apps${Reset}"
     echo -e "${IBlack}[*] ${pks_apps}${Reset}"
-    echo -e "${Blue}[?] What packages to exclude (seperate by \",\")?${Reset}"
+    echo -e "${Blue}[?] What packages to exclude? (seperate by \",\")${Reset}"
     echo -en "${Green}>>> ${Reset}"
     read -p "" pkg_exl_app
     pkg_exl_app=$(echo -n $pkg_exl_app | sed "s/ //g")
@@ -228,7 +228,7 @@ function install_dotfiles() {
 }
 
 function options() {
-    echo -e "${IRed}Pick either 1, 2, 3 or 4"
+    echo -e "${IRed}Pick either 1, 2, 3 or 4${Reset}"
 }
 
 function main() {
