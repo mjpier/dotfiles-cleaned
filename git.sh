@@ -6,6 +6,14 @@ then
     exit -1
 fi
 
+if [[ ! -d .git  ]];
+then
+    git init
+    git add .
+    git remote add origin https://github.com/TruncatedDinosour/dotfiles-cleaned.git
+fi
+
+
 echo "commiting with the message \"$1\""
 git add .
 git commit -m "$1"
