@@ -8,6 +8,22 @@
 > Are the windows floating by default?<br/>
 
 **No, the windows are not floating by default, I made it like that so i could show you the look B)**
+
+<br/>
+
+> How do i install the dotfiles?
+
+**type `make install`**
+
+<br/>
+
+> How do i update /root?
+
+**1. type `sudo su -`**<br/>
+**2. type `git clone https://github.com/TruncatedDinosour/dotfiles-cleaned`**<br/>
+**3. type `cd dotfiles-cleaned`**<br/>
+**4. type `make root_install`**<br/>
+
 <br/><br/>
 
 ## DWM setup
