@@ -233,6 +233,7 @@ function install_dotfiles() {
     chmod +x $HOME/.bash_git
     chmod +x $HOME/.dwm/autostart.sh
     chmod +x $HOME/.dwm/dwm-bar/*
+    chmod +x $HOME/.config/mpv/scripts/*
     $sud_cmd chmod +x /usr/bin/pfetch
 }
 
