@@ -59,6 +59,7 @@ from=(
     "/home/ari/ari/coding/resources_/dotfiles-cleaned/scripts"
     "/home/ari/ari/coding/resources_/dotfiles-cleaned/patch_fish"
     "/etc/nanorc"
+    "/etc/mkinitcpio.conf"
 )
 to=(
     "dotfiles/core_scripts/bash_git"
@@ -97,6 +98,7 @@ to=(
     "dotfiles/scripts"
     "dotfiles/fish_patch"
     "dotfiles/RCs/nanorc"
+    "dotfiles/core/mkinitcpio.conf"
 )
 
 for i in "${!from[@]}";

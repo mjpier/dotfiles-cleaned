@@ -193,6 +193,15 @@ function install_dotfiles() {
         $sud_cmd cp -rfv dotfiles/core/blacklist.conf /etc/modprobe.d/blacklist.conf
     fi
 
+    echo -e "${Blue}[?] Do you want to overwrite your mkinitcpio config with mine?${Reset}"
+    echo -en "${IWhite}(${Green}y${IWhite}/${Red}N${IWhite})> ${Reset}"
+    read -p "" cpio_over
+    if [[ "${cpio_over,,}" == "y" ]];
+    then
+        $sud_cmd cp -rfv dotfiles/core/mkinitcpio.conf /etc/mkinitcpio.conf
+        $sud_cmd mkinitcpio -p linux
+    fi
+
 
     from_1=(
         "dotfiles/editors/vim/vim"
