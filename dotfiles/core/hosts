@@ -1,0 +1,15 @@
+# Static table lookup for hostnames.
+# See hosts(5) for details.
+
+127.0.0.1	localhost
+::1			localhost
+127.0.1.1	ari-arch.localdomain	ari-arch
+
+# block domains
+0.0.0.0		google-analytics.com
+0.0.0.0		marketingplatform.google.com
+0.0.0.0		ggpht.com
+0.0.0.0		gstatic.com
+0.0.0.0		ytimg.com
+0.0.0.0		mobiletracker.org
+0.0.0.0		104.18.20.226

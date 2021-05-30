@@ -129,6 +129,8 @@ function install_software() {
     $sud_cmd make clean install
     cd ../../st/st
     $sud_cmd make clean install
+    cd ../../dmenu/dmenu-5.0
+    $sud_cmd make clean install
     cd ../../../../
     rm -rfv oh-my-fish
 }
@@ -226,6 +228,7 @@ function install_dotfiles() {
     $sud_cmd cp -rfv dotfiles/RCs/nanorc /etc/nanorc
     cp -rfv dotfiles/core_scripts/bash_git $HOME/.bash_git
     cp -rfv dotfiles/core_scripts/xinitrc $HOME/.xinitrc
+    $sud_cmd cp -rfv dotfiles/core/hosts /etc/hosts
     
     $sud_cmd chown root:root $HOME/.xinitrc
     $sud_cmd chmod +x $HOME/.xinitrc

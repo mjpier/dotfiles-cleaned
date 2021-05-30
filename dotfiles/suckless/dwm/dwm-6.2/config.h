@@ -86,8 +86,8 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "rofi", "-show", "run", NULL };
-// static const char *dmenuwin[] = { "rofi", "-show", "window", NULL };
+// static const char *dmenucmd[] = { "rofi", "-show", "run", NULL };
+static const char *dmenucmd[] = { "dmenu_run", NULL };
 
 static const char *mutecmd[] = { "amixer", "-q", "set", "Master", "toggle", NULL  };
 static const char *volupcmd[] = { "amixer", "-q", "set", "Master", "5%+", "unmute", NULL  };

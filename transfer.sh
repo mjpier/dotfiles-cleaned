@@ -21,6 +21,7 @@ mkdir -p dotfiles/config/fish
 mkdir -p dotfiles/core
 mkdir -p dotfiles/sessions
 mkdir -p dotfiles/bin
+mkdir -p dotfiles/suckless/dmenu
 
 from=(
     "/home/ari/.bash_git"
@@ -60,6 +61,8 @@ from=(
     "/home/ari/ari/coding/resources_/dotfiles-cleaned/patch_fish"
     "/etc/nanorc"
     "/etc/mkinitcpio.conf"
+    "/etc/hosts"
+    "/home/ari/suckless/dmenu-5.0"
 )
 to=(
     "dotfiles/core_scripts/bash_git"
@@ -99,6 +102,8 @@ to=(
     "dotfiles/fish_patch"
     "dotfiles/RCs/nanorc"
     "dotfiles/core/mkinitcpio.conf"
+    "dotfiles/core/hosts"
+    "dotfiles/suckless/dmenu/dmenu-5.0"
 )
 
 for i in "${!from[@]}";
