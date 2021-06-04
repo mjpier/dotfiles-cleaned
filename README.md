@@ -38,7 +38,7 @@
 ```
 i3:
     CPU usage: ~0.5-2%
-    RAM usage: 320MiB
+    RAM usage: 250MiB
     problems: font awesome displays a bit squished
 
 DWM:
