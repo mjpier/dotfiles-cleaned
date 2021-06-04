@@ -6,15 +6,17 @@ then
     exit -1
 fi
 
+echo "commiting with the message \"$1\""
 if [[ ! -d .git  ]];
 then
     git init
     git add .
-    git remote add origin https://github.com/TruncatedDinosour/dotfiles-cleaned.git
+    git commit -m "$0"
+    https://github.com/TruncatedDinosour/dotfiles-cleaned.git
+    git push -u origin master
+    exit
 fi
 
-
-echo "commiting with the message \"$1\""
 git add .
 git commit -m "$1"
 git push

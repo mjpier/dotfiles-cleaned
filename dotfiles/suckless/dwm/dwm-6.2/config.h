@@ -49,6 +49,7 @@ static const Rule rules[] = {
     /* tag 4 */
     { "discord",                    NULL,       NULL,       1 << 3,       0,           0,           0,          -1 },
     { "TelegramDesktop",            NULL,       NULL,       1 << 3,       0,           0,           0,          -1 },
+    { "KotatogramDesktop",          NULL,       NULL,       1 << 3,       0,           0,           0,          -1 },
     
     /* tag 5 */
     { "Microsoft Teams - Preview",  NULL,       NULL,       1 << 4,       0,           0,           0,          -1 },
