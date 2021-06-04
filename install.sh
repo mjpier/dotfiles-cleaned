@@ -230,8 +230,8 @@ function install_dotfiles() {
     cp -rfv dotfiles/core_scripts/xinitrc $HOME/.xinitrc
     $sud_cmd cp -rfv dotfiles/core/hosts /etc/hosts
     
-    $sud_cmd chown root:root $HOME/.xinitrc
-    $sud_cmd chmod +x $HOME/.xinitrc
+    # $sud_cmd chown root:root $HOME/.xinitrc
+    chmod +x $HOME/.xinitrc
     
     chmod +x $HOME/.bash_git
     chmod +x $HOME/.dwm/autostart.sh
