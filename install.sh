@@ -74,11 +74,11 @@ fi
 
 # functions
 function install_software() {
-    pks_base="cmake curl feh fish fuse git make man-db nano nerd-fonts-hack python3 python-pip rsync ttf-font-awesome vim visual-studio-code-bin siji-git wget xclip"
+    pks_base="cmake curl feh fish fuse git make man-db nano nerd-fonts-hack python3 python-pip rsync ttf-font-awesome vim siji-git wget"
     pks_i3="i3-gaps i3blocks python-i3ipc"
-    pks_apps="discord bpython ksnip libreoffice-fresh mpv pfetch telegram-desktop-bin thunar tor-browser firefox"
+    pks_apps="discord bpython ksnip libreoffice-fresh mpv pfetch telegram-desktop-bin thunar tor-browser firefox visual-studio-code-bin"
     pks_extra="alacritty bat bc gruvbox-dark-gtk gruvbox-material-icon-theme-git youtube-dl htop i3lock-color lxappearance rofi xautolock"
-    pks_disp="lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings picom xorg"
+    pks_disp="lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings picom xorg xorg-xinit"
 
     echo -e "${IGreen}[!] Installing base packages${Reset}"
     echo -e "${IBlack}[*] ${pks_base}${Reset}"

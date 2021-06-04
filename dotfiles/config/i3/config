@@ -340,7 +340,7 @@ mode "$mode_gaps_left" {
 
 
 # full path to your wallpaper
-set $wallpaper "/home/ari/Pictures/wallpaper.jpg'
+set $wallpaper "/home/ari/Pictures/wallpaper.jpg"
 
 # apps
 #* the screen locking tool you use *#
