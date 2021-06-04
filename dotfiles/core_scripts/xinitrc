@@ -34,4 +34,5 @@ fi
 
 # exec our WMs/DEs
 exec dwm
+# exec i3
 

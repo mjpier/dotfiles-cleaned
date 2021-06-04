@@ -97,7 +97,7 @@ function check_colour() {
         colour="\e[0;91m" # red
     fi
     cwd="$(pwd | sed "s:^$HOME:~:")"
-    export PS1="\n${colour}╭─${reset} \u ${colour}at${reset} \h ${colour}in${reset} ${cwd}$(__git_ps1)${reset}\n${colour}╰> ${reset}"
+    export PS1="\n${colour}[${reset} \u ${colour}at${reset} \h ${colour}in${reset} ${cwd} ${colour}]${reset}$(__git_ps1)${reset}\n${colour}~> ${reset}"
 }
 
 PROMPT_COMMAND="check_colour"
