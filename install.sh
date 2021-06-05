@@ -76,7 +76,7 @@ fi
 function install_software() {
     pks_base="cmake curl feh fish fuse git make man-db nano nerd-fonts-hack python3 python-pip rsync ttf-font-awesome vim siji-git wget"
     pks_i3="i3-gaps i3blocks python-i3ipc"
-    pks_apps="discord bpython ksnip libreoffice-fresh mpv pfetch telegram-desktop-bin thunar tor-browser firefox visual-studio-code-bin"
+    pks_apps="discord bpython ksnip libreoffice-fresh mpv kotatogram-desktop-bin pfetch telegram-desktop-bin thunar tor-browser firefox visual-studio-code-bin"
     pks_extra="alacritty bat bc gruvbox-dark-gtk gruvbox-material-icon-theme-git youtube-dl htop i3lock-color lxappearance rofi xautolock"
     pks_disp="lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings picom xorg xorg-xinit"
 
@@ -173,10 +173,17 @@ function install_dotfiles() {
 
     for i in "${!from[@]}";
     do
-        cp -rfv ${from[$i]} ${to[$i]}
+        $sud_cmd cp -rfv ${from[$i]} ${to[$i]}
     done
     cp -rfv dotfiles/config/* $HOME/.config
 
+    echo -e "${Blue}[?] Do you want to overwrite your pacman config with mine?${Reset}"
+    echo -en "${IWhite}(${Green}y${IWhite}/${Red}N${IWhite})> ${Reset}"
+    read -p pacm_over
+    if [[ "${pacm_over,,}" == "y" ]];
+    then
+        $sud_cmd cp -rfv dotfiles/core/pacman.conf /etc/pacman.conf
+    fi
 
     echo -e "${Blue}[?] Do you want to overwrite your GRUB config with mine?${Reset}"
     echo -en "${IWhite}(${Green}y${IWhite}/${Red}N${IWhite})> ${Reset}"

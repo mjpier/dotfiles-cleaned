@@ -63,6 +63,7 @@ from=(
     "/etc/mkinitcpio.conf"
     "/etc/hosts"
     "/home/ari/suckless/dmenu-5.0"
+    "/etc/pacman.conf"
 )
 to=(
     "dotfiles/core_scripts/bash_git"
@@ -104,6 +105,7 @@ to=(
     "dotfiles/core/mkinitcpio.conf"
     "dotfiles/core/hosts"
     "dotfiles/suckless/dmenu/dmenu-5.0"
+    "dotfiles/core/pacman.conf"
 )
 
 for i in "${!from[@]}";

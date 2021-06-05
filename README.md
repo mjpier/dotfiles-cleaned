@@ -94,3 +94,5 @@ DWM:
 
 # Resources
 ### [Wallpaper](https://user-images.githubusercontent.com/71613062/120086655-2e73be80-c0d0-11eb-9def-79aaae20abcd.jpg)<br/>
+### [Telegram Theme I Use](https://github.com/gilbertw1/telegram-gruvbox-theme)
+
