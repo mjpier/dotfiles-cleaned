@@ -14,4 +14,5 @@ chmod +x bin/install
 bin/install
 cd ..
 rm -rfv oh-my-fish
+cp -rfv dotfiles/config $HOME/.config
 
