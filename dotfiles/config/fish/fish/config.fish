@@ -25,17 +25,9 @@ alias show-fish-aliases="/usr/bin/cat /etc/fish/config.fish | /usr/bin/grep \"^a
 alias show-fish-config="/usr/bin/cat /etc/fish/config.fish"
 
 # long commands
-alias nanosync-h2r="/usr/bin/$sudo_command /usr/bin/cp ~/.nanorc /etc/nanorc"
-alias nanosync-r2h="/usr/bin/cp /etc/nanorc ~/.nanorc"
-
 alias grub-remake="/usr/bin/$sudo_command /usr/bin/grub-mkconfig -o /boot/grub/grub.cfg"
 alias grub-config="/usr/bin/$sudo_command /usr/bin/$cli_editor /etc/default/grub"
 alias get-grub-config="/usr/bin/cat /etc/default/grub"
-
-alias edit-graphics-config="/usr/bin/$sudo_command /usr/bin/$cli_editor /etc/X11/xorg.conf.d/20-intel.conf"
-alias get-hw-config="/usr/bin/cat /etc/X11/xorg.conf.d/20-intel.conf"
-alias get-gdriver-info="/usr/bin/$sudo_command /usr/bin/lspci -k | /usr/bin/grep -EA3 \"VGA|3D|Display\""
-alias get-hw="/usr/bin/$sudo_command /usr/bin/lspci"
 
 alias edit-reflector-config="/usr/bin/$sudo_command /usr/bin/$cli_editor /etc/xdg/reflector/reflector.conf"
 alias show-reflector-config="/usr/bin/cat /etc/xdg/reflector/reflector.conf"
@@ -48,16 +40,12 @@ alias ssh-disable="/usr/bin/$sudo_command /usr/bin/systemctl stop sshd.service &
 alias edit-vim-config="/usr/bin/$sudo_command /usr/bin/$cli_editor /etc/vimrc"
 alias vimsync="/usr/bin/cp /etc/vimrc ~/.vimrc"
 
-alias edit-alac-config="/usr/bin/$cli_editor /home/$username/.config/alacritty/alacritty.yml"
-# alias edit-dunstrc="/usr/bin/$cli_editor /home/$username/suckless/dunst/config.h"
-
 # utility commands
 alias ew="reboot"
 
 alias add="/usr/bin/$aur_helper -S"
 alias nay="/usr/bin/$aur_helper -R"
 alias bye="/usr/bin/$aur_helper -Rns"
-alias cln="/usr/bin/git clone"
 alias upt="/usr/bin/$aur_helper && omf update"
 alias cle="/usr/bin/$aur_helper -Rns (/usr/bin/$aur_helper -Qdtq) 2> /dev/null || true"
 alias cuc="/usr/bin/$aur_helper -Scc && /usr/bin/$sudo_command /usr/bin/pacman -Scc"
@@ -66,25 +54,19 @@ alias mrf="/usr/bin/$sudo_command /usr/bin/reflector --age 10 --latest 50 --sort
 alias ers="/usr/bin/echo \"\" >"
 alias esh="/usr/bin/echo \"\" > /home/$username/.ssh/known_hosts"
 alias fld="/usr/bin/find / 2>/dev/null | /usr/bin/grep -i"
-alias suc="/usr/bin/rm -rf ~/.cache/paru/clone/*"
-
-alias systype="/usr/bin/file /sbin/init"
-alias back="cd .."
+alias suc="/usr/bin/rm -rfv ~/.cache/*"
 
 # command remapping (people might want to remove these)
 alias ls="/usr/bin/lsd"
 alias cat="/usr/bin/bat"
-alias clear="/usr/bin/clear && /usr/bin/pfetch"
+alias clear="/usr/bin/clear && autorun"
+alias grep="/usr/bin/grep --color=auto -i"
 
 # custom comands (people might what to remove these)
 alias glew="/usr/bin/python3.9 /home/$username/$username/coding/python_/glew/glew/__main__.py"
 
-alias edit-fish-prompt-user="/usr/bin/$cli_editor /home/$username/.config/fish/functions/fish_prompt.fish"
-alias edit-fish-prompt-root="/usr/bin/$sudo_command /usr/bin/$cli_editor /root/.config/fish/functions/fish_prompt.fish"
-
 alias edit-i3-config="/usr/bin/$cli_editor /home/$username/.config/i3/config"
 alias edit-i3blocks-config="/usr/bin/$cli_editor /home/$username/.config/i3blocks/i3blocks.conf"
-alias edit-poly-config="/usr/bin/$cli_editor /home/$username/.config/polybar/config"
 
 # tools (people might what to remove these)
 alias etcher="/usr/bin/chmod +x $username/coding/tools_/etcher-flash/balenaEtcher.AppImage && /usr/bin/$sudo_command ~/$username/coding/tools_/etcher-flash/balenaEtcher.AppImage"
@@ -94,8 +76,14 @@ alias ngrok="/usr/bin/chmod +x /home/$username/$username/coding/tools_/ngrok_/ng
 export EDITOR="vim"
 export BROWSER="firefox"
 
-export coding="/home/ari/ari/coding"
-
 # autorun (people might what to remove these)
-/usr/bin/pfetch
+if type -q autorun
+    autorun
+else
+    function autorun
+    end
+    funcsave autorun
+end
+
+
 

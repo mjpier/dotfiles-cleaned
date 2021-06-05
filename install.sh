@@ -165,6 +165,7 @@ function install_dotfiles() {
         "dotfiles/RCs/bashrc"
         "dotfiles/RCs/nanorc"
         "dotfiles/config/fish/fish"
+        "dotfiles/config/fish/fish/functions"
     )
     to=(
         "/usr/bin/pfetch"
@@ -185,6 +186,7 @@ function install_dotfiles() {
         "$HOME/.bashrc"
         "/etc/nanorc"
         "/etc/fish"
+        "$HOME/.config/fish/functions"
     )
 
     for i in "${!from[@]}";

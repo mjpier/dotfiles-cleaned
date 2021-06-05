@@ -110,7 +110,7 @@ to=(
 
 for i in "${!from[@]}";
 do
-    cp -rfv ${from[$i]} ${to[$i]}
+    cp -rfv ${from[$i]} ${to[$i]} || sudo cp -rfv ${from[$i]} ${to[$i]}
 done
 
 rm -rfv dotfiles/editors/vim/vim/undodir
